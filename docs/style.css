@@ -12,4 +12,15 @@ body {
 
 body {
   background-color:#ccc;
+  font-family:"Source Sans Pro", sans-serif;
+}
+
+header {
+  height:60px;
+  line-height:60px;
+  background:white;
+
+  font-family:"Josefin Sans", sans-serif;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
