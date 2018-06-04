@@ -58,7 +58,7 @@ main:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,0.2);
+  background: rgba(32,42,52,0.5);
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
@@ -103,6 +103,31 @@ main nav ul li {
   height:50px;
   display:inline-block;
   margin:20px 0;
+}
+
+main nav ul li a.social-link {
+  border:none;
+  padding-left:13px;
+  box-sizing:border-box;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  margin-right:20px;
+}
+
+.fa {
+  font-size:30px !important;
+  line-height:30px !important;
+}
+
+.fa-facebook:hover {
+  background-color:#193B6C !important;
+  text-align:left !important;
+}
+
+.fa-instagram:hover {
+  background-color:#C82D46 !important;
+  text-align:center !important;
 }
 
 main nav ul li a {
