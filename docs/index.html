@@ -3,18 +3,37 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Karla|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro" rel="stylesheet">
     <title>Wish Youth Network Society</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
-  <body>
-    <header>
+  <body onload="playVideo();">
+    <img src="candles.png" />
+    <!--
+    <video id="bg-video" autoplay>
+      <source src="timelapse.mp4" type="video/mp4">
+    </video>
+    -->
+    <div class="img-overlay">
+    </div>
+
+    <main>
       <h1>
         Wish Youth Network Society
       </h1>
       <nav>
-        hello
-        how are you doing
+        <ul>
+          <li><a href="#">Support our Cause</a></li>
+          <li><a href="#">About WYNS</a></li> <!-- About Us, Contact Us -->
+          <li><a href="#">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
+        </ul>
       </nav>
-    </header>
+    </main>
+    <script type="text/javascript">
+      var bgVid = $("bg-video");
+      function playVideo() {
+        bgVid.play();
+      }
+    </script>
   </body>
 </html>
