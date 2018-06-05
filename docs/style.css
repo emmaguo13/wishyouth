@@ -103,6 +103,7 @@ main nav ul li {
   height:50px;
   display:inline-block;
   margin:20px 0;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.5);
 }
 
 main nav ul li a.social-link {
@@ -113,6 +114,7 @@ main nav ul li a.social-link {
   height:50px;
   line-height:50px;
   margin-right:20px;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.5);
 }
 
 .fa {
