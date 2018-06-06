@@ -3,7 +3,7 @@
 }
 
 ::selection {
-  asdfasadf
+  background: rgba(32,42,52,0.5);
 }
 
 * {
@@ -174,7 +174,7 @@ main:after {
 main nav {
   width:350px;
   height:auto;
-  margin-top:16vh;
+  margin-top:14vh;
 }
 
 main nav ul {
