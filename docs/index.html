@@ -50,15 +50,20 @@
     </section>
 
     <section id="cause">
-
+      <div class="container">
+      </div>
     </section>
 
     <section id="about">
+      <div class="container">
 
+      </div>
     </section>
 
     <section id="team">
+      <div class="container">
 
+      </div>
     </section>
 
 
@@ -89,17 +94,17 @@
                  $(".thecause").css("opacity", "0");
                  $(".about").css("opacity", "0");
                  $(".ourteam").css("opacity", "0");
-             } else if (($(window).scrollTop() >= offsetCause) && ($(window).scrollTop() < offsetAbout)) {
+             } else if (($(window).scrollTop() >= offsetCause - 5) && ($(window).scrollTop() < offsetAbout)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "1");
                $(".about").css("opacity", "0");
                $(".ourteam").css("opacity", "0");
-             } else if (($(window).scrollTop() >= offsetAbout) && ($(window).scrollTop() < offsetTeam)) {
+             } else if (($(window).scrollTop() >= offsetAbout - 5) && ($(window).scrollTop() < offsetTeam)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "0");
                $(".about").css("opacity", "1");
                $(".ourteam").css("opacity", "0");
-             } else if ($(window).scrollTop() >= offsetTeam) {
+             } else if ($(window).scrollTop() >= offsetTeam - 5) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "0");
                $(".about").css("opacity", "0");
