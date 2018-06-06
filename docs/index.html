@@ -7,38 +7,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Wish Youth Network Society</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src='js/modernizr.js'></script>
   </head>
   <body onload="playVideo();">
-    <img src="candles.png" />
     <!--
     <video id="bg-video" autoplay>
       <source src="timelapse.mp4" type="video/mp4">
     </video>
     -->
-    <div class="img-overlay">
+    <div class="menu-bars" onclick="menuClick(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
 
-    <main>
+    <div id="otay">
       <h1>
         Wish Youth Network Society
       </h1>
-      <nav>
-        <ul>
-          <li><a href="#">Support our Cause</a></li>
-          <li><a href="#">About WYNS</a></li> <!-- About Us, Contact Us -->
-          <li><a href="#">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
-          <br>
-          <li><a class="social-link fa fa-facebook" style="background-color:#204A87;" href="#"></a></li>
-          <li><a class="social-link fa fa-instagram" style="background-color:#fb3958;" href="#"></a></li>
-        </ul>
-      </nav>
-    </main>
+      <main>
+        <nav>
+          <ul>
+            <li><a href="#">Support our Cause</a></li>
+            <li><a href="#">About WYNS</a></li> <!-- About Us, Contact Us -->
+            <li><a href="#">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
+            <br>
+            <li><a class="social-link fa fa-facebook" style="background-color:#204A87;" href="#"></a></li>
+            <li><a class="social-link fa fa-instagram" style="background-color:#fb3958;" href="#"></a></li>
+          </ul>
+        </nav>
+      </main>
+    </div>
+
+    <section>
+      <img src="candles.png" />
+      <div class="img-overlay">
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+
+
     <script type="text/javascript">
       var bgVid = $("bg-video");
       function playVideo() {
         bgVid.play();
       }
+
+  		function menuClick(x) {
+  			x.classList.toggle("change");
+
+  			$("#otay").toggleClass("change").delay(300);
+        $("body").toggleClass("change").delay(300);
+  		}
     </script>
   </body>
 </html>

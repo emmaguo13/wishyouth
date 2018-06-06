@@ -1,3 +1,11 @@
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::selection {
+  asdfasadf
+}
+
 * {
   margin:0;
   padding:0
@@ -13,6 +21,52 @@ body {
 body {
   background-color:#ccc;
   font-family:"Source Sans Pro", sans-serif;
+}
+
+body.change {
+  overflow:hidden;
+}
+
+.menu-bars {
+	display:inline-block;
+	cursor:pointer;
+	float:left;
+	margin:60px 25px 22px 65px;
+	z-index:751;
+	width:38px;
+	transition: 0.4s;
+	position:fixed;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	height: 5px;
+	background-color: white;
+	margin: 3.5px 0;
+	float:left;
+	transition: 0.4s cubic-bezier(0.755, 0.175, 0.290, 0.825);
+}
+
+.bar1 { width: 50px; }
+
+.bar2 { width: 42px; }
+
+.bar3 { width: 34px; }
+
+.menu-bars:hover > .bar1,
+.menu-bars:hover > .bar2,
+.menu-bars:hover > .bar3 {
+	width: 50px;
+}
+
+.menu-bars.change {
+} .change .bar1 {
+	width: 50px;
+} .change .bar2 {
+	width: 50px;
+} .change .bar3 {
+	width: 50px;
 }
 
 img,
@@ -40,6 +94,26 @@ div.img-overlay {
   */
 }
 
+#otay {
+  height:100vh;
+  width:100vw;
+  transition:1s all cubic-bezier(0.45, 0.02, 0.01, 1);
+  position:fixed;
+  z-index:750;
+}
+
+#otay.change {
+  background-color:rgba(0,0,0,0.3);
+}
+
+#otay.change main {
+  margin-left:0;
+}
+
+section {
+  min-height:100vh;
+}
+
 main {
   position: relative;
   display: inline-block;
@@ -49,6 +123,8 @@ main {
   width:calc(25% - 100px);
   box-sizing:border-box;
   z-index:1;
+  margin-left:-100vw;
+  transition:1s all cubic-bezier(0.45, 0.02, 0.01, 1);
 }
 
 main:after {
@@ -58,7 +134,7 @@ main:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(32,42,52,0.5);
+  background: rgba(32,42,52,0.7);
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
@@ -68,7 +144,7 @@ main:after {
   z-index: -1;
 }
 
-main h1 {
+#otay h1 {
   position:relative;
   padding:0 10px;
   background-color:#202A34;
@@ -82,12 +158,23 @@ main h1 {
   letter-spacing:3px;
   box-shadow:5px 5px 0 rgba(0,0,0,0.5);
   text-shadow:0 0 10px rgba(0,0,0,0.5);
+  position:absolute;
+  z-index:700;
+  margin-left:25px;
+  opacity:0;
+  margin-top:15vh;
+  transition:1s all cubic-bezier(0.45, 0.02, 0.01, 1);
+}
+
+#otay.change h1 {
+  opacity:1;
+  margin-top:23vh;
 }
 
 main nav {
   width:350px;
   height:auto;
-  margin-top:50%;
+  margin-top:16vh;
 }
 
 main nav ul {
@@ -103,7 +190,6 @@ main nav ul li {
   height:50px;
   display:inline-block;
   margin:20px 0;
-  box-shadow:5px 5px 0 rgba(0,0,0,0.5);
 }
 
 main nav ul li a.social-link {
@@ -146,6 +232,7 @@ main nav ul li a {
   border-style:none none none solid;
   border-width:5px;
   border-color:white;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.5);
 }
 
 main nav ul li a:hover {
