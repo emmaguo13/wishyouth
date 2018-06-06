@@ -69,6 +69,22 @@ body.change {
 	width: 50px;
 }
 
+#section-show {
+  position:fixed;
+  top:50px;
+  right:65px;
+  height:37px;
+  line-height:35px;
+  color:white;
+  font-family:"Oswald", sans-serif;
+  border-style:none solid none none;
+  border-color:white;
+  border-width:6px;
+  padding-right:10px;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
 img,
 #bg-video {
   position:absolute;
