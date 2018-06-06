@@ -149,7 +149,7 @@ main {
   width:calc(25% - 100px);
   box-sizing:border-box;
   z-index:1;
-  margin-left:-100vw;
+  margin-left:-50vw;
   transition:1s all cubic-bezier(0.45, 0.02, 0.01, 1);
 }
 
@@ -192,7 +192,7 @@ main:after {
 
 #otay.change h1 {
   opacity:1;
-  margin-top:23vh;
+  margin-top:21vh;
 }
 
 main nav {
@@ -262,4 +262,16 @@ main nav ul li a {
 main nav ul li a:hover {
   background:#192129;
   border-width:15px;
+}
+
+section#cause {
+  background-color:black;
+}
+
+section#about {
+  background-color:green;
+}
+
+section#team {
+  background-color:blue;
 }

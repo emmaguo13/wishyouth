@@ -32,9 +32,9 @@
       <main>
         <nav>
           <ul>
-            <li><a href="#">Support the Cause</a></li>
-            <li><a href="#">About WYNS</a></li> <!-- About Us, Contact Us -->
-            <li><a href="#">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
+            <li><a href="#cause">Support the Cause</a></li>
+            <li><a href="#about">About WYNS</a></li> <!-- About Us, Contact Us -->
+            <li><a href="#team">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
             <br>
             <li><a class="social-link fa fa-facebook" style="background-color:#204A87;" href="#"></a></li>
             <li><a class="social-link fa fa-instagram" style="background-color:#fb3958;" href="#"></a></li>
@@ -84,25 +84,44 @@
          var offsetTeam = teamSection.offset().top; //check for top property
          $(function () {
            $(window).scroll(function () {
-             if ($(window).scrollTop() >= offsetCause) {
+             if ($(window).scrollTop() < offsetCause) {
+                 $(".wyns").css("opacity", "1");
+                 $(".thecause").css("opacity", "0");
+                 $(".about").css("opacity", "0");
+                 $(".ourteam").css("opacity", "0");
+             } else if (($(window).scrollTop() >= offsetCause) && ($(window).scrollTop() < offsetAbout)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "1");
                $(".about").css("opacity", "0");
                $(".ourteam").css("opacity", "0");
-             } else if ($(window).scrollTop() < offsetCause) {
-               $(".wyns").css("opacity", "1");
-               $(".thecause").css("opacity", "0");
-               $(".about").css("opacity", "0");
-               $(".ourteam").css("opacity", "0");
-             } else if ($(window).scrollTop() >= offsetAbout) {
+             } else if (($(window).scrollTop() >= offsetAbout) && ($(window).scrollTop() < offsetTeam)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "0");
                $(".about").css("opacity", "1");
                $(".ourteam").css("opacity", "0");
+             } else if ($(window).scrollTop() >= offsetTeam) {
+               $(".wyns").css("opacity", "0");
+               $(".thecause").css("opacity", "0");
+               $(".about").css("opacity", "0");
+               $(".ourteam").css("opacity", "1");
              }
            });
          });
        });
+
+       $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
     </script>
   </body>
 </html>
