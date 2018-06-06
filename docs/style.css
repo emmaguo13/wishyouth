@@ -27,11 +27,19 @@ body.change {
   overflow:hidden;
 }
 
+.wyns { opacity:1; }
+
+.thecause { opacity:0; }
+
+.about { opacity:0; }
+
+.ourteam { opacity:0; }
+
 .menu-bars {
 	display:inline-block;
 	cursor:pointer;
 	float:left;
-	margin:60px 25px 22px 65px;
+	margin:65px 25px 22px 65px;
 	z-index:751;
 	width:38px;
 	transition: 0.4s;
@@ -71,7 +79,7 @@ body.change {
 
 #section-show {
   position:fixed;
-  top:50px;
+  top:60px;
   right:65px;
   height:37px;
   line-height:35px;
@@ -83,6 +91,8 @@ body.change {
   padding-right:10px;
   font-size:26px;
   letter-spacing:1px;
+  transition:0.2s all;
+  text-transform:uppercase;
 }
 
 img,

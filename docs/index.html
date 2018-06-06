@@ -20,9 +20,10 @@
       <div class="bar3"></div>
     </div>
 
-    <div id="section-show">
-      WYNS
-    </div>
+    <div id="section-show" class="wyns">WYNS</div>
+    <div id="section-show" class="thecause">Join The Cause</div>
+    <div id="section-show" class="about">About Us</div>
+    <div id="section-show" class="ourteam">Our Team</div>
 
     <div id="otay">
       <h1>
@@ -31,7 +32,7 @@
       <main>
         <nav>
           <ul>
-            <li><a href="#">Support our Cause</a></li>
+            <li><a href="#">Support the Cause</a></li>
             <li><a href="#">About WYNS</a></li> <!-- About Us, Contact Us -->
             <li><a href="#">Our Team</a></li> <!-- Board, Execs, Internal Execs, Application link -->
             <br>
@@ -83,11 +84,21 @@
          var offsetTeam = teamSection.offset().top; //check for top property
          $(function () {
            $(window).scroll(function () {
-             if ($(window).scrollTop() >= causeSection) {
-               $("#section-show").css("content","'Join Our Cause'");
-               alert(offsetCause);
-             } else if ($(window).scrollTop() >= aboutSection) {
-               $("#section-show").css("content","'About Our Team'");
+             if ($(window).scrollTop() >= offsetCause) {
+               $(".wyns").css("opacity", "0");
+               $(".thecause").css("opacity", "1");
+               $(".about").css("opacity", "0");
+               $(".ourteam").css("opacity", "0");
+             } else if ($(window).scrollTop() < offsetCause) {
+               $(".wyns").css("opacity", "1");
+               $(".thecause").css("opacity", "0");
+               $(".about").css("opacity", "0");
+               $(".ourteam").css("opacity", "0");
+             } else if ($(window).scrollTop() >= offsetAbout) {
+               $(".wyns").css("opacity", "0");
+               $(".thecause").css("opacity", "0");
+               $(".about").css("opacity", "1");
+               $(".ourteam").css("opacity", "0");
              }
            });
          });
