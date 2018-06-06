@@ -163,20 +163,18 @@ main:after {
 #otay h1 {
   position:relative;
   padding:0 10px;
-  background-color:#202A34;
   color:white;
   width:800px;
-  text-align:center;
-  line-height:20px;
+  text-align:left;
+  line-height:50px;
   font-size:55px;
   text-transform:uppercase;
   font-family:"Oswald", sans-serif;
   letter-spacing:3px;
-  box-shadow:5px 5px 0 rgba(0,0,0,0.5);
-  text-shadow:0 0 10px rgba(0,0,0,0.5);
+  text-shadow:5px 5px 0 rgba(0,0,0,0.5);
   position:absolute;
   z-index:700;
-  margin-left:25px;
+  margin-left:60px;
   opacity:0;
   margin-top:15vh;
   transition:1s all cubic-bezier(0.45, 0.02, 0.01, 1);

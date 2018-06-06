@@ -48,15 +48,15 @@
       </div>
     </section>
 
-    <section>
+    <section id="cause">
 
     </section>
 
-    <section>
+    <section id="about">
 
     </section>
 
-    <section>
+    <section id="team">
 
     </section>
 
@@ -73,6 +73,25 @@
   			$("#otay").toggleClass("change").delay(300);
         $("body").toggleClass("change").delay(300);
   		}
+
+	     $(document).ready(function() {
+         var causeSection = $("#cause"); //get offset of second div
+         var aboutSection = $("#about");
+         var teamSection = $("#team");
+         var offsetCause = causeSection.offset().top; //check for top property
+         var offsetAbout = aboutSection.offset().top; //check for top property
+         var offsetTeam = teamSection.offset().top; //check for top property
+         $(function () {
+           $(window).scroll(function () {
+             if ($(window).scrollTop() >= causeSection) {
+               $("#section-show").css("content","'Join Our Cause'");
+               alert(offsetCause);
+             } else if ($(window).scrollTop() >= aboutSection) {
+               $("#section-show").css("content","'About Our Team'");
+             }
+           });
+         });
+       });
     </script>
   </body>
 </html>
