@@ -21,7 +21,7 @@
     </div>
 
     <div id="section-show" class="wyns">WYNS</div>
-    <div id="section-show" class="thecause">Join The Cause</div>
+    <div id="section-show" class="thecause">Support The Cause</div>
     <div id="section-show" class="about">About Us</div>
     <div id="section-show" class="ourteam">Our Team</div>
 
@@ -44,9 +44,9 @@
     </div>
 
     <section>
-      <img src="candles.png" />
-      <div class="img-overlay">
-      </div>
+      <div class="img-overlay"></div>
+      <img id="fixed-bg" src="candles.png" />
+      <img id="fixed-bg" class="logo" src="logo.png" />
     </section>
 
     <section id="cause">
@@ -84,9 +84,9 @@
          var causeSection = $("#cause"); //get offset of second div
          var aboutSection = $("#about");
          var teamSection = $("#team");
-         var offsetCause = causeSection.offset().top; //check for top property
-         var offsetAbout = aboutSection.offset().top; //check for top property
-         var offsetTeam = teamSection.offset().top; //check for top property
+         var offsetCause = causeSection.offset().top - 10; //check for top property
+         var offsetAbout = aboutSection.offset().top - 10; //check for top property
+         var offsetTeam = teamSection.offset().top - 10; //check for top property
          $(function () {
            $(window).scroll(function () {
              if ($(window).scrollTop() < offsetCause) {
@@ -94,17 +94,17 @@
                  $(".thecause").css("opacity", "0");
                  $(".about").css("opacity", "0");
                  $(".ourteam").css("opacity", "0");
-             } else if (($(window).scrollTop() >= offsetCause - 5) && ($(window).scrollTop() < offsetAbout)) {
+             } else if (($(window).scrollTop() >= offsetCause) && ($(window).scrollTop() < offsetAbout)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "1");
                $(".about").css("opacity", "0");
                $(".ourteam").css("opacity", "0");
-             } else if (($(window).scrollTop() >= offsetAbout - 5) && ($(window).scrollTop() < offsetTeam)) {
+             } else if (($(window).scrollTop() >= offsetAbout) && ($(window).scrollTop() < offsetTeam)) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "0");
                $(".about").css("opacity", "1");
                $(".ourteam").css("opacity", "0");
-             } else if ($(window).scrollTop() >= offsetTeam - 5) {
+             } else if ($(window).scrollTop() >= offsetTeam) {
                $(".wyns").css("opacity", "0");
                $(".thecause").css("opacity", "0");
                $(".about").css("opacity", "0");

@@ -106,6 +106,15 @@ img,
   z-index:-1;
 }
 
+img.logo {
+  width:200px;
+  height:200px;
+  position:absolute;
+  top:calc(50vh - 100px);
+  left:calc(50vw - 100px);
+  opacity:0.8;
+}
+
 div.img-overlay {
   z-index:0;
   height:100%;
@@ -129,7 +138,7 @@ div.img-overlay {
 }
 
 #otay.change {
-  background-color:rgba(0,0,0,0.3);
+  background-color:rgba(0,0,0,0.4);
 }
 
 #otay.change main {
@@ -138,6 +147,12 @@ div.img-overlay {
 
 section {
   min-height:100vh;
+  z-index:500;
+}
+
+#fixed-bg {
+  z-index:-1;
+  position:fixed;
 }
 
 main {
